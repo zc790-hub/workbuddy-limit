@@ -1,0 +1,16 @@
+#!/bin/zsh
+# 双击启动包装：自动定位项目根目录，用虚拟环境（或系统 python3）运行菜单栏挂件。
+# 项目根 = 本文件的 MacOS 目录再上两级（WorkBuddyLimit.app/Contents/MacOS/）
+HERE="$(cd "$(dirname "$0")" && pwd)"
+ROOT="$(cd "$HERE/../../.." && pwd)"
+cd "$ROOT" || exit 1
+
+PY="$ROOT/.venv/bin/python"
+[ -x "$PY" ] || PY="$(command -v python3 2>/dev/null)"
+if [ -z "$PY" ]; then
+  echo "[$(date)] 未找到 python3，请先运行 ./setup.sh" >> "$ROOT/app.log"
+  exit 1
+fi
+
+echo "[$(date)] start" >> "$ROOT/app.log"
+exec "$PY" -u "$ROOT/workbuddy-limit.py" >> "$ROOT/app.log" 2>&1

@@ -1,0 +1,3 @@
+# Python 依赖（菜单栏 GUI）
+rumps>=0.4.0
+pyobjc-framework-Cocoa>=10.0
