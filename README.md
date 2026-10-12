@@ -40,7 +40,7 @@
 ## 安装
 
 ```bash
-git clone https://github.com/<your-name>/workbuddy-limit.git
+git clone https://github.com/zc790-hub/workbuddy-limit.git
 cd workbuddy-limit
 ./setup.sh     # 建 .venv + 装 rumps/pyobjc + npm install
 ./run.sh       # 启动菜单栏挂件
@@ -97,7 +97,7 @@ workbuddy-limit.py  (rumps 菜单栏)
 
 形态灵感来自 [ai-limit](https://github.com/zhuchenxi113/ai-limit) —— 一个在 macOS 菜单栏监控 Claude Code / Codex 用量配额的同类工具。「菜单栏常驻 + 下拉看明细」的交互思路受它启发。
 
-本项目为**独立实现**，未复用其任何代码（该仓库采用非标准许可证，本项目不引用其源码）。同族还有姊妹项目 `kimi-limit`（盯 Kimi 会员额度，暂未开源），共享同一套架构思路。
+本项目为**独立实现**，未复用其任何代码（该仓库采用非标准许可证，本项目不引用其源码）。同族还有姊妹项目 `kimi-limit`（盯 Kimi 会员额度，仓库已就绪、暂未公开发布），共享同一套架构思路。
 
 > 如果你真正想监控的是 Claude Code / Codex 的额度，建议直接用 ai-limit 原版。
 
